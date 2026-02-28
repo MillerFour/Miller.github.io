@@ -1,5 +1,204 @@
+# ==================== 基础站点配置 ====================
 site_name: Miller's F.I.R.E
-site_url: https://miller.github.io
+site_url: https://millerfour.github.io/miller.github.io/
 site_author: Miller
+
+# ==================== 主题配置 ====================
 theme:
-  name: material #主题
+  name: material  # 使用 Material 主题
+  favicon: assets/favicon.png
+  logo: assets/logo.png    # Logo图片路径
+  # 配色方案（亮色/暗色模式切换）
+  palette:
+    - scheme: default
+      primary: white  # 亮色模式顶部颜色
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  # 主题功能开关
+  features:
+    - announce.dismiss              # 可关闭的临时公告
+    - navigation.tracking           # 地址栏URL自动更新锚点
+    - navigation.tabs               # 顶部标签页导航
+    - navigation.sections           # 侧边栏分组展示（大屏）
+    - navigation.top                # 返回顶部按钮
+    - navigation.footer             # 侧边栏显示页脚
+    - search.suggest                # 搜索输入联想
+    - search.highlight              # 搜索关键词高亮
+    - search.share                  # 搜索结果分享
+    - navigation.expand             # 打开标签时侧边栏全展开
+    - navigation.indexes            # 节索引页，文档可直接附加到节
+    - content.tabs.link             # 内容标签页链接
+    - content.tooltips              # 内容提示框
+    - content.code.copy             # 代码块复制按钮
+    - content.action.edit           # 内容编辑操作
+    - content.action.view           # 内容查看操作
+    - content.code.annotate         # 代码注释功能
+  language: zh                      # 界面语言：简体中文
+  icon:
+    repo: fontawesome/brands/github # 右上角仓库图标
+    logo: logo                      # 站点logo
+
+# ==================== 导航菜单配置 ====================
+nav: 
+  - MKdocs中文教程:
+      - 许可声明: blog/MIT.md
+      - MKdocs教程(三部曲):
+          - 0.Mkdocs教程前言: blog/Mkdocs/mkfirst.md
+          - 1.利用Mkdocs部署静态网页: blog/Mkdocs/mkdocs1.md
+          - 2.Mkdocs配置说明(mkdocs.yml): blog/Mkdocs/mkdocs2.md
+          - 3.解决Github Pages部署mkdocs自定义域名失效的问题: blog/Mkdocs/mkdocs3.md
+          - 4.解决mkdocs serve 后127.0.0.1:8000无法自动刷新的问题: blog/click.md
+      - Mkdocs美化/补充:
+          - 为MKdocs添加多语言翻译: blog/websitebeauty/mkdocs-translate.md
+          - 为MKdocs添加AI摘要(Plus版本): blog/websitebeauty/MkDocs-AI-Summary-plus.md
+          - MkDocs文档AI摘要: blog/websitebeauty/Mkdocs-AI-Summary.md
+          - MkDocs文档日期插件: blog/websitebeauty/mkdocs-document-dates.md
+          - 添加相关推荐文章: blog/websitebeauty/recommend.md
+          - 添加阅读信息统计: blog/websitebeauty/reading_time.md
+          - 添加Mkdocs博客: blog/Mkdocs/mkdocsblog.md
+          - 如何给MKdocs添加友链: blog/Mkdocs/linktech.md
+          - 网页圆角化设计: blog/websitebeauty/yuanjiaohua.md
+          - 添加评论系统(giscus为例): blog/websitebeauty/mkcomments.md
+          - 添加在线聊天: blog/websitebeauty/webtalknow.md
+          - 添加友链: blog/websitebeauty/linktech.md
+          - 添加顶部公告栏: blog/websitebeauty/header.md
+          - 修改网站字体: blog/websitebeauty/mkdocsfont.md
+          - JS实现鼠标样式: blog/websitebeauty/shubiao.md
+          - 背景特效: blog/websitebeauty/backgroud.md
+          - 嵌入PDF文件: blog/websitebeauty/mkpdf.md
+          - 相对地址的一些问题: blog/websitebeauty/Relativeaddress.md
+          - 添加404页面: blog/websitebeauty/404.md
+          - 为MKdocs添加文章修订时间戳: blog/websitebeauty/time.md
+          - 页脚设置: blog/websitebeauty/footer.md
+          - 加速网站访问的一些心得: blog/websitebeauty/accelerate.md
+  - 建设MKdocs技能指北:
+      - Markdown:
+          - Markdown指南: develop/Markdown/markdown.md
+          - MWeb Pro: develop/Markdown/MWeb.md
+      - Git 实用技巧: develop/git.md
+      - 利用Lighthouse测试网站性能: develop/lighthouse.md
+      - 如何将 github pages 迁移到 vercel 上托管: develop/vercel.md
+      - 设计美学:
+          - 唐·诺曼—情感设计的三个层次: develop/designbeauty/db1.md
+          - 我对设计的一些观点: develop/designbeauty/my-to-desihn.md
+  - 建设MKdocs技能指北: 
+      - Markdown: develop/markdown.md
+  - 标签: 
+      - Markdown: develop/markdown.md
+  - 留言板: 
+      - Markdown: develop/markdown.md
+  - 博客: 
+      - Markdown: develop/markdown.md
+  - 友链: 
+      - Markdown: develop/markdown.md
+  - 关于: 
+      - Markdown: develop/markdown.md
+  - 博客首页: 
+      - Markdown: develop/markdown.md
+
+# ==================== 额外配置 ====================
+extra:
+  homepage: https://millerfour.github.io/miller.github.io/
+  # 多语言切换
+  alternate:
+    - name: 简体中文
+      link: /
+      lang: zh   
+    - name: English
+      link: /Mkdocs-Wcowin/en/
+      lang: en
+    - name: China(TW)
+      link: /Mkdocs-Wcowin/ZH-TW/
+      lang: zh-TW
+  generator: false  # 隐藏页脚“使用 MkDocs 材料制造”
+  # 社交图标配置
+  social:
+    - icon: fontawesome/brands/weixin
+      link: https://s1.imagehub.cc/images/2024/02/02/bb9ee71b03ee7a3b87caad5cc4bcebff.jpeg
+      name: Wechat
+    - icon: fontawesome/brands/telegram
+      link: https://t.me/wecowin
+      name: telegram
+    - icon: fontawesome/brands/x-twitter
+      link: https://twitter.com/wcowin_
+    - icon: fontawesome/brands/github
+      link: https://github.com/Wcowin
+    - icon: fontawesome/regular/envelope
+      link: mailto:wangkewen821@gmail.com
+    - icon: fontawesome/brands/bilibili
+      link: https://space.bilibili.com/1407028951/lists/4566631?type=series
+  # 谷歌分析（需替换为自己的ID）
+  analytics:
+    provider: google
+    property: ""
+  # 页面反馈功能
+  feedback:
+    title: 此页面有帮助吗？
+    ratings:
+      - icon: material/thumb-up-outline
+        name: This page was helpful
+        data: 1
+        note: >-
+          谢谢你的反馈！
+      - icon: material/thumb-down-outline
+        name: This page could be improved
+        data: 0
+        note: >-
+          Thanks for your feedback! Help us improve this page by
+          using our <a href="https://marketingplatform.google.com/about/analytics/" target="_blank" rel="noopener">feedback form</a>.
+  # Cookie 授权提示
+  consent:
+    title: Cookie consent
+    description: >-
+      我们也使用cookies来识别您的重复访问和偏好来衡量我们文档的有效性以及用户是否找到他们要找的东西。
+      如果你同意,你可以帮助我们让我们的网站更好
+
+# ==================== 自定义CSS ====================
+extra_css:
+  - https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css  # 霞鹜文楷字体
+  - stylesheets/customize.css  # 自定义样式（圆角/字体等）
+
+# ==================== 插件配置 ====================
+plugins:
+  - search  # 内置搜索插件
+  # Git提交者信息插件（暂禁用）
+  - git-committers:
+      enabled: false
+      repository: Wcowin/Mkdocs-Wcowin
+      branch: main
+      exclude:
+        - index.md
+        - tag.md
+        - liuyanban.md
+        - blog/posts/update.md
+        - blog/posts/wkw.md
+        - about/link.md
+  # Git修订日期插件（暂禁用）
+  - git-revision-date-localized:
+      enabled: false
+      type: iso_date
+      enable_creation_date: false
+      exclude:
+        - index.md
+        - tag.md
+        - liuyanban.md
+        - blog/posts/update.md
+        - blog/posts/wkw.md
+        - about/link.md
+        - websitebeauty/linktech.md
+  # 博客功能插件
+  - blog:
+      post_date_format: full                # 完整日期格式
+      draft: true                           # 启用草稿功能
+      draft_if_future_date: true            # 未来日期自动标记为草稿
+      post_readtime: true                   # 显示阅读时间
+      post_readtime_words_per_minute: 265   # 每分钟阅读字数
+      post_url_format: "{date}/{slug}"      # 文章URL格式
+      pagination_url_format: "page/{page}"  # 分页URL格式
+      authors_file: "{blog}/.authors.yml"   # 作者信息文件路径
+  - tags  # 标签插件
